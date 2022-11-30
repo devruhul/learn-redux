@@ -1,13 +1,17 @@
-import './App.css';
+import { RouterProvider } from "react-router-dom";
+import "./App.css";
+import ProductContext from "./context/ProductContext";
+import routes from "./routes/routes";
 // import Counter from './Counter';
-import LongForm from './LongForm';
+// import LongForm from './LongForm';
 
 function App() {
   return (
-    <div className="App">
+    <ProductContext className='App'>
       {/* <Counter/> */}
-      <LongForm/>
-    </div>
+      {/* <LongForm /> */}
+      <RouterProvider router={routes} />
+    </ProductContext>
   );
 }
 
