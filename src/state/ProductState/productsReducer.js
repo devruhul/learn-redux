@@ -40,9 +40,10 @@ export const productsReducer = (state, action) => {
         wishlist: [...state.wishlist, action.payload],
       };
     case actionTypes.REMOVE_FROM_CART_SINGLE_ITEM:
+      const newCart = state.carts.filter((cart) => cart.id !== action.payload);
       return {
         ...state,
-        carts: state.carts.filter((cart) => cart.id !== action.payload),
+        carts: [...newCart],
       };
 
     default:

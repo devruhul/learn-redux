@@ -17,6 +17,7 @@ const ProductContext = ({ children }) => {
       .catch(() => dispatch({ type: "GET_PRODUCTS_FAILURE" }));
   }, []);
 
+  console.log(state);
   const value = { state, dispatch };
   return (
     <PRODUCT_CONTEXT.Provider value={value}>
